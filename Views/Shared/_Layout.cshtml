@@ -1,0 +1,38 @@
+﻿﻿@using System.Web.UI.WebControls
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Sitesi</title>
+    <link rel="stylesheet" href="~/Content/sytles.css">
+
+    <style>
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+        <header>Kütüphane</header>
+        <ul>
+            <li><a href="#">@Html.ActionLink("Anasayfa", "Index", "Anasayfa")</a></li>
+            <li><a href="#">@Html.ActionLink("Öğrenci", "OgrenciView", "Ogrenci")</a></li>
+            <li><a href="#">@Html.ActionLink("Kitaplar", "KitapView", "Kitap")</a></li>
+            <li><a href="#">@Html.ActionLink("Yayınevleri", "YayineviView", "Yayinevi")</a></li>
+            <li><a href="#">@Html.ActionLink("Kitap Türleri", "KitapTuruView", "KitapTuru")</a></li>
+            <li><a href="#">@Html.ActionLink("Yazarlar", "YazarView", "Yazar")</a></li>
+            <li><a href="#">@Html.ActionLink("Kitap Teslim", "KitapOgrenciView", "KitapOgrenci")</a></li>
+        </ul>
+    </div>
+    <section></section>
+    @RenderBody()
+</body>
+
+</html>
+
